@@ -1,0 +1,641 @@
+<!DOCTYPE html> 
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автопарк — Viptransport</title>
+
+  <meta name="description" content="Автопарк Viptransport: седаны, бизнес-класс, минивэны и микроавтобусы.">
+  <link rel="canonical" href="avto.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Автопарк — Viptransport">
+  <meta property="og:description" content="Автопарк Viptransport: седаны, бизнес-класс, минивэны и микроавтобусы.">
+  <meta property="og:url" content="avto.html">
+  <meta property="og:site_name" content="Viptransport">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #fff;
+    }
+
+    .section {
+      padding: 60px 20px;
+    }
+
+    .car-block {
+      margin-bottom: 90px;
+      text-align: center;
+    }
+
+    .car-photo img {
+      width: 80%;
+      max-width: 350px;
+      border-radius: 16px;
+      display: block;
+      margin: 0 auto 15px;
+    }
+
+    /* --- Слайдер интерьера --- */
+    .car-interior.swiper {
+      width: 90%;
+      max-width: 950px;
+      height: 420px;
+      margin: 0 auto 10px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      background: #000;
+    }
+
+    .car-interior .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .car-interior .swiper-slide img {
+      width: 85%;
+      height: 85%;
+      object-fit: contain;
+      border-radius: 16px;
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+    }
+
+    .car-interior .swiper-slide img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Центрирование стрелок */
+    .car-interior .swiper-button-prev,
+    .car-interior .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .car-interior .swiper-button-prev:hover,
+    .car-interior .swiper-button-next:hover {
+      background: rgba(10, 38, 71, 0.8);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .swiper-pagination-bullet {
+      background: #fff;
+    }
+
+    /* Lightbox просмотр */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 95%;
+      max-height: 95%;
+      border-radius: 12px;
+      cursor: zoom-out;
+    }
+
+    .lightbox.show {
+      display: flex;
+    }
+
+    footer {
+      background: #000;
+      color: #fff;
+      padding: 60px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .footer-column h4 {
+      color: #fff;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .footer-desc {
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+      color: #ddd;
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .socials a {
+      color: #fff;
+      font-size: 1.3rem;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      color: #fafaf9;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #222;
+      padding-top: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+    html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #000; /* можно заменить на фон hero */
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh; /* чтобы перекрыть экран */
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .car-card img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* Планшеты и телефоны горизонтально */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .logo img {
+    width: 130px;
+    height: auto;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 15px;
+    padding: 6px 0;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .car-card {
+    width: 85%;
+    margin: 0 auto 20px;
+  }
+
+  .review-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .review-card {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .socials {
+    justify-content: center;
+  }
+
+}
+
+/* Маленькие телефоны (iPhone SE, Xiaomi Redmi, Galaxy A-серии) */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav a {
+    font-size: 14px;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-image img {
+    width: 100%;
+  }
+
+  .service-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .review-card {
+    width: 100%;
+  }
+
+  footer .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .socials {
+    justify-content: center;
+  }
+
+}
+
+/* Минимальные экраны (320px) */
+@media (max-width: 360px) {
+  .nav a {
+    font-size: 13px;
+  }
+  .logo img {
+    width: 80px;
+  }
+  .hero h1 {
+    font-size: 1.1rem;
+  }
+  .socials {
+    justify-content: center;
+  }
+
+}
+  </style>
+</head>
+
+<body>
+
+<header class="top-bar">
+  <div class="logo">
+  <a href="home.html">
+    <img src="photo/лого вариант 2.jpg" alt="Viptransport логотип">
+  </a>
+</div>
+  <nav class="nav">
+    <a href="home.html">Главная</a>
+    <a href="servis.html">Услуги</a>
+    <a href="avto.html" class="active">Автопарк</a>
+    <a href="about-us.html">О нас</a>
+    <a href="contacts.html">Контакты</a>
+  </nav>
+</header>
+
+<main class="page">
+  <section class="section container">
+    <h1>Наш автопарк</h1>
+    <p class="lead" style="text-align:center; max-width:800px; margin:0 auto 60px;">
+      Премиальные автомобили Viptransport созданы для вашего комфорта.
+    </p>
+
+    <!-- машины -->
+    <article class="car-block">
+      <h2>Mercedes-Benz W222 S-Class</h2>
+      <div class="car-photo"><img src="photo/w22.jpg" alt=""></div>
+      <div class="car-interior swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="photo/w22 салон.jpg"></div>
+          <div class="swiper-slide"><img src="photo/w22 салон 2.jpg"></div>
+          <div class="swiper-slide"><img src="photo/w22 салон 3.jpg"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </article>
+
+    <article class="car-block">
+      <h2>Mercedes-Benz W223 S-Class</h2>
+      <div class="car-photo"><img src="photo/w23.jpg" alt=""></div>
+      <div class="car-interior swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="photo/w23 салон.jpg"></div>
+          <div class="swiper-slide"><img src="photo/w23 салон 2.jpg"></div>
+          <div class="swiper-slide"><img src="photo/w23 салон 3.jpg"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </article>
+
+    <article class="car-block">
+      <h2>Mercedes-Benz Sprinter 10 pax</h2>
+      <div class="car-photo"><img src="photo/sprinter.jpg"></div>
+      <div class="car-interior swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="photo/sprinter салон.jpg"></div>
+          <div class="swiper-slide"><img src="photo/спринтер салон 2.jpg"></div>
+          <div class="swiper-slide"><img src="photo/спринтер салон 3.jpg"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </article>
+    <article class="car-block">
+      <h2>Mercedes-Benz Sprinter 18 pax</h2>
+      <div class="car-photo"><img src="photo/Спринтер биг.jpg"></div>
+      <div class="car-interior swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="photo/салон спринтер б 1.jpg"></div>
+          <div class="swiper-slide"><img src="photo/салон спринтер б 2.jpg"></div>
+          <div class="swiper-slide"><img src="photo/спринтер салон б3.jpg"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </article>
+
+    <article class="car-block">
+      <h2>Mercedes-Benz V-Class</h2>
+      <div class="car-photo"><img src="photo/v-class.jpg"></div>
+      <div class="car-interior swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="photo/виана салон.jpg"></div>
+          <div class="swiper-slide"><img src="photo/виана салон 2.jpg"></div>
+          <div class="swiper-slide"><img src="photo/виана салон 3.jpg"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </article>
+
+    <article class="car-block">
+      <h2>Toyota Land Cruiser 300</h2>
+      <div class="car-photo"><img src="photo/Toyota.jpg"></div>
+      <div class="car-interior swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="photo/тойота салон1 .jpg"></div>
+          <div class="swiper-slide"><img src="photo/тойота салон 2.jpg"></div>
+          <div class="swiper-slide"><img src="photo/тойота салон 3.jpg"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </article>
+
+    <article class="car-block">
+      <h2>Audi Q4 e-tron</h2>
+      <div class="car-photo"><img src="photo/q4.jpg"></div>
+    </article>
+     <article class="car-block">
+      <h2>BYD Han EV</h2>
+      <div class="car-photo"><img src="photo/Byd.png"></div>
+      <div class="car-interior swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="photo/салон byd 1.png "></div>
+          <div class="swiper-slide"><img src="photo/салон byd 2.png"></div>
+          <div class="swiper-slide"><img src="photo/салон byd 3.png"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox"><img src="" alt=""></div>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h4>Viptransport</h4>
+        <p class="footer-desc">
+          Премиальные трансферы по Казахстану — безопасность, комфорт и пунктуальность.
+          Более 50 автомобилей люкс-класса и круглосуточная поддержка.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Контакты</h4>
+        <p><a href="tel:+7 701 760 5597">+7 701 760 5597</a></p>
+   <p><a href="mailto:info.viptransport@mail.ru">info@viptransport@mail.ru</a></p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Услуги</h4>
+        <ul class="footer-links">
+          <li>Трансфер в аэропорт</li>
+          <li>Свадебные мероприятия</li>
+          <li>Экскурсии и туры</li>
+          <li>Деловые поездки</li>
+          <li>Аренда микроавтобусов</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Мы в соцсетях</h4>
+       <div class="socials">
+            <a href="https://wa.me/77017605597" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://t.me/viptransportkz" class="social-link" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.instagram.com/vip.transport.kz?igsh=MXg1Ymg2djRzODUzcA==" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+       
+      <h4 style="margin-top:18px;">Как нас найти</h4>
+<a href="https://2gis.kz/almaty/geo/70000001038059610" 
+   target="_blank" 
+   class="map-btn">
+  <i class="fa-solid fa-location-dot"></i> Открыть в 2ГИС
+</a>
+
+<style>
+.map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0A2647;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-top: 8px;
+}
+.map-btn:hover {
+  background: #051fb5;
+  color: #000;
+  transform: translateY(-2px);
+}
+</style>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Viptransport. Все права защищены.</p>
+    <p class="small-note">Разработка и поддержка — Viptransport</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.querySelectorAll('.swiper').forEach(slider => {
+    new Swiper(slider, {
+      loop: true,
+      navigation: {
+        nextEl: slider.querySelector('.swiper-button-next'),
+        prevEl: slider.querySelector('.swiper-button-prev'),
+      },
+      pagination: {
+        el: slider.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
+      autoplay: { delay: 4000, disableOnInteraction: false },
+    });
+  });
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  document.querySelectorAll('.car-interior img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('show');
+    });
+  });
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('show');
+  });
+  document.querySelectorAll('.car-photo img, .car-interior img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('show');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('show');
+    });
+</script>
+</body>
+</html>
