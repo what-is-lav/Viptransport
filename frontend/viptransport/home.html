@@ -37,17 +37,13 @@
 }
 </script>
 <style>
-/* ==============================
-   📱 Адаптивка Viptransport
-   ============================== */
-
-/* Большие планшеты */
+  
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  background-color: #000; /* можно заменить на фон hero */
+  background-color: #000; 
 }
 
 .hero {
@@ -55,7 +51,47 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 100vh; /* чтобы перекрыть экран */
+  min-height: 100vh; 
+}
+
+.about-text h2 {
+  color: #F2F2F2;
+  font-weight: 700;
+}
+
+.about-text p {
+  color: rgba(255,255,255,0.9);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.service-card h3 {
+  color: #F2F2F2;
+  font-weight: 700;
+}
+
+.service-card p {
+  color: rgba(255,255,255,0.9);
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.service-card i {
+  color: #F2F2F2;
+}
+
+.car-card h3 {
+  color: #F2F2F2;
+  font-weight: 700;
+}
+
+.car-card p {
+  color: rgba(255,255,255,0.9);
+  line-height: 1.5;
+}
+
+.car-card .stars {
+  color: #F2F2F2;
 }
 
 @media (max-width: 1024px) {
@@ -78,9 +114,17 @@ html, body {
     height: auto;
     width: 100%;
   }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .service-card p,
+  .car-card p {
+    font-size: 1rem;
+  }
 }
 
-/* Планшеты и телефоны горизонтально */
 @media (max-width: 768px) {
   .top-bar {
     flex-direction: column;
@@ -141,13 +185,24 @@ html, body {
     flex-direction: column;
     gap: 6px;
   }
+
   .socials {
     justify-content: center;
   }
 
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .service-card p,
+  .car-card p {
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
 }
 
-/* Маленькие телефоны (iPhone SE, Xiaomi Redmi, Galaxy A-серии) */
+
 @media (max-width: 480px) {
   body {
     font-size: 15px;
@@ -207,29 +262,50 @@ html, body {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .socials {
     justify-content: center;
   }
 
+  .about-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-text p,
+  .service-card p,
+  .car-card p {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
 }
 
-/* Минимальные экраны (320px) */
 @media (max-width: 360px) {
   .nav a {
     font-size: 13px;
   }
+
   .logo img {
     width: 80px;
   }
+
   .hero h1 {
     font-size: 1.1rem;
   }
+
   .socials {
     justify-content: center;
   }
 
+  .about-text p,
+  .service-card p,
+  .car-card p {
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
 }
 </style>
+
+
 </head>
 <body>
 
@@ -288,7 +364,7 @@ html, body {
 </h2>
 
 <p class="section-subtitle" style="text-align:center; font-size:1.1rem; color:#d6d6d6; margin-bottom:40px;">
-  У нас более 50+ автомобилей люкс сегмента и качества
+  У нас более 20 автомобилей люкс сегмента и качества
 </p>
 
     <div class="swiper mySwiper">
@@ -337,7 +413,7 @@ html, body {
   <div class="service-cards">
     <div class="service-card">
       
-      <h3><i class="fas fa-taxi"></i> Индивидуальные поездки по городу</h3>
+      <h3><i class="fas fa-taxi"></i> Трансферы по городу</h3>
       <p>Комфортные трансферы по Алматы: встречи, деловые поездки, сопровождение.</p>
     </div>
 
@@ -349,7 +425,7 @@ html, body {
 
     <div class="service-card">
       
-      <h3><i class="fas fa-ring"></i>  Транспортное сопровождение мероприятий</h3>
+      <h3><i class="fas fa-ring"></i> Свадебные мероприятия</h3>
       <p>Премиальные автомобили для вашего особенного дня.</p>
     </div>
 
@@ -438,15 +514,7 @@ html, body {
       <div class="footer-column">
         <h4>Контакты</h4>
         <p><a href="tel:+7 701 760 5597">+7 701 760 5597</a></p>
-  <p style="font-size: 1.1rem; margin: 8px 0;">
-  <i class="fa-solid fa-envelope"></i>
-  <a href="mailto:info.viptransport@mail.ru" style="color: #fff; text-decoration: none;">
-   info.viptransport@mail.ru
-  </a>
-</p>
-
-
-
+     <p><a href="mailto:info.viptransport@mail.ru">info@viptransport@mail.ru</a></p>
       </div>
 
       <div class="footer-column">
