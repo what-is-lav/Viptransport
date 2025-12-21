@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(frontendPath, 'home.html'));
 });
 
-app.get('/:page', (req, res) => {
+app.get('/:page([a-zA-Z0-9-]+)', (req, res) => {
   res.sendFile(path.join(frontendPath, `${req.params.page}.html`));
 });
 
