@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <!-- Google tag (gtag.js) -->
+   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17821622688"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,383 +10,282 @@
 
   gtag('config', 'AW-17821622688');
 </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>О нас — Viptransport</title>
+  <title>О компании — Viptransport | Премиум Трансферы</title>
 
-  <meta name="description" content="О компании Viptransport: парк авто, водители, 24/7 поддержка.">
-  <link rel="canonical" href="about-us.html">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="О нас — Viptransport">
-  <meta property="og:description" content="О компании Viptransport: парк авто, водители, 24/7 поддержка.">
-  <meta property="og:url" content="about-us.html">
-  <meta property="og:site_name" content="Viptransport">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="О нас — Viptransport">
-  <meta name="twitter:description" content="О компании Viptransport: парк авто, водители, 24/7 поддержка.">
+  <meta name="description" content="Viptransport — лидер в сфере премиальных пассажирских перевозок по Казахстану. Безопасность, комфорт и стиль.">
   
-
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="canonical" href="https://viptransport.onrender.com/about-us">
-  <meta property="og:url" content="https://viptransport.onrender.com/about-us">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+
   <style>
-    
+    /* =========================================
+       УНИКАЛЬНЫЕ СТИЛИ СТРАНИЦЫ "О НАС"
+       ========================================= */
+    .about-hero {
+      padding: 160px 5% 100px;
+      background: linear-gradient(to bottom, rgba(5,5,5,0.9), rgba(5,5,5,1)), url('photo/mersmain2.png') center/cover;
+      text-align: center;
+      border-bottom: 1px solid #111;
+    }
+
+    .about-title {
+      font-size: 3rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
+
+    .about-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 0 auto 50px;
+      line-height: 1.8;
+    }
+
+    /* Блок со статистикой */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .stat-card {
+      background: #0a0a0a;
+      border: 1px solid #1a1a1a;
+      border-radius: 10px;
+      padding: 40px 20px;
+      transition: 0.3s ease;
+    }
+
+    .stat-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .stat-text {
+      color: #fff;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Блок с описанием и миссией */
+    .about-content {
+      padding: 100px 5%;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: var(--container-width);
+      margin: 0 auto;
+    }
+
+    .content-text h2 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .content-text p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .content-image img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #222;
+    }
+
+    /* Призыв к действию (CTA) */
+    .cta-section {
+      background: #0a0a0a;
+      padding: 80px 5%;
+      text-align: center;
+      border-top: 1px solid #111;
+      border-bottom: 1px solid #111;
+    }
+
+    .cta-section h3 {
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .cta-btns {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .btn-gold {
+      padding: 16px 35px;
+      background: var(--gold);
+      color: #000;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    .btn-gold:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .btn-outline {
+      padding: 16px 35px;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: #000;
+    }
+
+    @media (max-width: 992px) {
+      .content-grid { grid-template-columns: 1fr; text-align: center; }
+      .about-title { font-size: 2.2rem; }
+    }
+    @media (max-width: 576px) {
+      .cta-btns { flex-direction: column; }
+    }
   </style>
-  <meta name="google-site-verification" content="-Y_cD2TxUdQWb9m8TWymkimy_9KUSOwr7Iybdzy4a9c" />
+
 </head>
 <body>
-<header class="top-bar">
-  <div class="logo">
-  <a href="home.html">
-    <img src="photo/лого вариант 2.jpg" alt="Viptransport логотип">
-  </a>
-</div>
-  <nav class="nav">
-    <a href="home.html">Главная</a>
-    <a href="servis.html">Услуги</a>
-    <a href="avto.html">Автопарк</a>
-    <a href="about-us.html">О нас</a>
-    <a href="contacts.html">Контакты</a>
-  </nav>
-</header>
 
-<main class="page">
-
-<section class="about section container">
-  <h1 class="h1">О компании <span>Viptransport</span></h1>
-
-  <p class="lead">
-    Viptransport — это сервис премиальных трансферов по всему Казахстану.  
-    Мы работаем <strong>24/7</strong>, обеспечивая комфорт, безопасность и стиль на каждом километре пути.
-  </p>
-
-  <div class="about-grid">
-    <div class="about-item">
-      <i class="fa-solid fa-car-side"></i>
-      <h3>Современный автопарк</h3>
-      <p>Более 50 автомобилей: бизнес-класс, минивэны, микроавтобусы и VIP-седаны.</p>
+  <header class="header">
+    <div class="logo">
+      <a href="home.html" class="logo-text">VIP<span>TRANSPORT</span></a>
     </div>
+    <nav class="nav">
+      <a href="home.html" class="nav-link">ГЛАВНАЯ</a>
+      <a href="servis.html" class="nav-link">УСЛУГИ</a>
+      <a href="avto.html" class="nav-link">АВТОПАРК</a>
+      <a href="about-us.html" class="nav-link active">О НАС</a>
+      <a href="contacts.html" class="nav-link">КОНТАКТЫ</a>
+    </nav>
+    <div class="header-contacts">
+      <a href="tel:+77017605597" class="header-phone">+7 701 760 5597</a>
+    </div>
+  </header>
 
-    <div class="about-item">
-      <i class="fa-solid fa-user-tie"></i>
-      <h3>Опытные водители</h3>
-      <p>Все наши водители проходят обучение и говорят на русском и английском языках.</p>
-    </div>
+  <main class="page">
+    
+    <section class="about-hero">
+      <div data-aos="fade-up">
+        <h1 class="about-title">Viptransport</h1>
+        <p class="about-subtitle">Лидер в сфере премиальных пассажирских перевозок по Казахстану. Безопасность, стиль и безупречная пунктуальность — наши главные приоритеты.</p>
+        
+        <div class="stats-grid">
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="stat-number">10+</div>
+            <div class="stat-text">Лет на рынке</div>
+          </div>
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="stat-number">50+</div>
+            <div class="stat-text">Премиум авто</div>
+          </div>
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="stat-number">5k+</div>
+            <div class="stat-text">Довольных клиентов</div>
+          </div>
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="stat-number">24/7</div>
+            <div class="stat-text">Поддержка</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="about-item">
-      <i class="fa-solid fa-credit-card"></i>
-      <h3>Удобная оплата</h3>
-      <p>Принимаем наличные и безналичные расчёты. Возможен договор и корпоративный счёт.</p>
-    </div>
-  </div>
-</section>
+    <section class="about-content">
+      <div class="content-grid">
+        <div class="content-text" data-aos="fade-right">
+          <h2>Стандарт выше ожиданий</h2>
+          <p>Мы создали компанию Viptransport для тех, кто не привык идти на компромиссы. Наша миссия — обеспечить каждому клиенту максимальный комфорт и абсолютную безопасность в любой поездке.</p>
+          <p>Каждый автомобиль в нашем парке проходит строжайший технический контроль. Наши водители — это профессионалы с многолетним безаварийным стажем, прошедшие обучение деловому этикету. Они всегда в строгих костюмах, вежливы и пунктуальны.</p>
+          <p>Доверяя нам свои поездки, вы выбираете статус, конфиденциальность и спокойствие.</p>
+        </div>
+        <div class="content-image" data-aos="fade-left">
+          <img src="photo/sprintermain.jpg" alt="Viptransport автопарк">
+        </div>
+      </div>
+    </section>
 
-<section class="why-us section container">
-  <h2>Почему выбирают Viptransport</h2>
-  <div class="features">
-    <div class="feature">
-      <i class="fa-solid fa-shield-halved"></i>
-      <h3>Безопасность</h3>
-      <p>Наш автопарк проходит регулярное ТО, а водители строго соблюдают ПДД.</p>
-    </div>
-    <div class="feature">
-      <i class="fa-solid fa-clock"></i>
-      <h3>Пунктуальность</h3>
-      <p>Мы гарантируем подачу автомобиля точно в назначенное время.</p>
-    </div>
-    <div class="feature">
-      <i class="fa-solid fa-user-tie"></i>
-      <h3>Профессиональные водители</h3>
-      <p>Опыт, вежливость и безупречный сервис — это наша гордость.</p>
-    </div>
-  </div>
-</section>
-</main>
-<footer class="site-footer">
-  <div class="footer-top">
+    <section class="cta-section" data-aos="fade-up">
+      <h3>Оцените наш сервис лично</h3>
+      <p style="color: #888; max-width: 600px; margin: 0 auto;">Забронируйте поездку за 2 минуты через удобный для вас канал связи.</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/77017605597" class="btn-gold"><i class="fab fa-whatsapp"></i> Написать в WhatsApp</a>
+        <a href="contacts.html" class="btn-outline">Наши контакты</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
     <div class="footer-grid">
-      
       <div class="footer-column">
-        <div class="footer-brand">
-          <div class="logo">Viptransport</div>
-          <p class="footer-desc">
-            Премиальные трансферы по Казахстану — безопасность, комфорт и пунктуальность. 
-            Более 50 автомобилей люкс-класса и круглосуточная поддержка.
-          </p>
+        <h4>VIPTRANSPORT</h4>
+        <p>Премиальные трансферы по Казахстану. Безопасность, комфорт и строгая пунктуальность.</p>
+      </div>
+      <div class="footer-column">
+        <h4>КОНТАКТЫ</h4>
+        <a href="tel:+77017605597" class="footer-link">+7 701 760 5597</a>
+        <a href="mailto:info@viptransport.kz" class="footer-link">info@viptransport.kz</a>
+      </div>
+      <div class="footer-column">
+        <h4>МЫ В СОЦСЕТЯХ</h4>
+        <div class="social-icons">
+          <a href="https://wa.me/77017605597"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://t.me/viptransportkz"><i class="fab fa-telegram-plane"></i></a>
+          <a href="https://www.instagram.com/vip.transport.kz"><i class="fab fa-instagram"></i></a>
         </div>
+        <a href="https://2gis.kz/almaty/geo/70000001038059610" target="_blank" class="map-link">Открыть в 2ГИС</a>
       </div>
-
-      <div class="footer-column">
-        <h4>Контакты</h4>
-        <p><a href="tel:+7 701 760 5597">+7 701 760 5597</a></p>
-  <p style="font-size: 1.1rem; margin: 8px 0;">
-  <i class="fa-solid fa-envelope"></i>
-  <a href="mailto:info.viptransport@mail.ru" style="color: #fff; text-decoration: none;">
-   info.viptransport@mail.ru
-  </a>
-</p>
-      </div>
-
-      <div class="footer-column">
-        <h4>Услуги</h4>
-        <ul class="footer-links">
-          <li>Трансфер в аэропорт</li>
-          <li>Свадебные мероприятия</li>
-          <li>Экскурсии и туры</li>
-          <li>Деловые поездки</li>
-          <li>Аренда микроавтобусов</li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4>Мы в соцсетях</h4>
-        <div class="socials">
-          <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="social-link" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
-          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-       <h4 style="margin-top:18px;">Как нас найти</h4>
-<a href="https://2gis.kz/almaty/geo/70000001038059610" 
-   target="_blank" 
-   class="map-btn">
-  <i class="fa-solid fa-location-dot"></i> Открыть в 2ГИС
-</a>
-
-<style>
-.map-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #0A2647;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  margin-top: 8px;
-}
-.map-btn:hover {
-  background: #051fb5;
-  color: #000;
-  transform: translateY(-2px);
-}
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  background-color: #000; /* можно заменить на фон hero */
-}
-.socials {
-  justify-content: flex-start;
-  }
-
-.hero {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 100vh; /* чтобы перекрыть экран */
-}
-
-@media (max-width: 1024px) {
-  .hero {
-    background-size: cover;
-    background-position: center;
-  }
-
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image img {
-    width: 90%;
-    margin-top: 20px;
-  }
-
-  .car-card img {
-    height: auto;
-    width: 100%;
-  }
-  .socials {
-    justify-content: center;
-  }
-
-}
-
-/* Планшеты и телефоны горизонтально */
-@media (max-width: 768px) {
-  .top-bar {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 15px 0;
-  }
-
-  .logo img {
-    width: 130px;
-    height: auto;
-  }
-
-  .nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .nav a {
-    font-size: 15px;
-    padding: 6px 0;
-  }
-
-  .hero h1 {
-    font-size: 1.7rem;
-    text-align: center;
-  }
-
-  .hero p {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .car-card {
-    width: 85%;
-    margin: 0 auto 20px;
-  }
-
-  .review-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .review-card {
-    width: 90%;
-    margin-bottom: 15px;
-  }
-
-  footer .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-  }
-
-  .footer-bottom-inner {
-    flex-direction: column;
-    gap: 6px;
-  }
-  .socials {
-    justify-content: center;
-  }
-
-}
-
-/* Маленькие телефоны (iPhone SE, Xiaomi Redmi, Galaxy A-серии) */
-@media (max-width: 480px) {
-  body {
-    font-size: 15px;
-    padding: 0 10px;
-  }
-
-  .logo img {
-    width: 100px;
-  }
-
-  .nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav a {
-    font-size: 14px;
-  }
-
-  .hero-content {
-    padding: 20px;
-  }
-
-  .hero h1 {
-    font-size: 1.4rem;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .about-image img {
-    width: 100%;
-  }
-
-  .service-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .service-card {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .review-card {
-    width: 100%;
-  }
-
-  footer .footer-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .socials {
-    justify-content: center;
-  }
-
-}
-
-/* Минимальные экраны (320px) */
-@media (max-width: 360px) {
-  .nav a {
-    font-size: 13px;
-  }
-  .logo img {
-    width: 80px;
-  }
-  .hero h1 {
-    font-size: 1.1rem;
-  }
-  .socials {
-    justify-content: center;
-  }
-
-}
-</style>
-
-      </div>
-
     </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div class="footer-bottom-inner">
-      <p>&copy; 2025 Viptransport. Все права защищены.</p>
-      <p class="small-note">Разработка и поддержка — Viptransport</p>
+    <div style="text-align: center; color: #555; font-size: 0.8rem; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px;">
+      &copy; 2026 Viptransport. Все права защищены.
     </div>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="home.js"></script>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 </body>
 </html>
