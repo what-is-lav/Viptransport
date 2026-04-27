@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <!-- Google tag (gtag.js) -->
+   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17821622688"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,601 +10,306 @@
 
   gtag('config', 'AW-17821622688');
 </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viptransport — Премиальные трансферы по Казахстану</title>
-
-  <meta name="description" content="Трансферы по Казахстану: аэропорты, деловые поездки, свадьбы, экскурсии. Профессиональные водители, поддержка 24/7.">
-  <link rel="canonical" href="home.html">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Viptransport — Премиальные трансферы по Казахстану">
-  <meta property="og:description" content="Трансферы по Казахстану: аэропорты, деловые поездки, свадьбы, экскурсии. Профессиональные водители, поддержка 24/7.">
-  <meta property="og:url" content="home.html">
-  <meta property="og:site_name" content="Viptransport">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Viptransport — Премиальные трансферы по Казахстану">
-  <meta name="twitter:description" content="Трансферы по Казахстану: аэропорты, деловые поездки, свадьбы, экскурсии. Профессиональные водители, поддержка 24/7.">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link rel="canonical" href="https://viptransport.onrender.com/">
-  <meta property="og:url" content="https://viptransport.onrender.com/">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Viptransport — Эксклюзивные трансферы и аренда VIP-авто</title>
+  <meta name="description" content="Премиальный автопарк в Казахстане. Аренда Mercedes S-Class, V-Class с личным водителем. Встречи в аэропорту, сопровождение делегаций.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Viptransport",
-  "image": "home-hero.jpg",
-  "telephone": "+77018885117",
-  "areaServed": "Kazakhstan",
-  "url": "home.html",
-  "sameAs": []
-}
-</script>
-<style>
-  
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  background-color: #000; 
-}
+  <style>
+    .home-hero {
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(105deg, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.6) 50%, rgba(0,0,0,0.1) 100%), url('photo/mersmain.jpg') center/cover no-repeat;
+      padding: 0 5%;
+      position: relative;
+    }
+    .home-hero-content {
+      max-width: 800px;
+      z-index: 2;
+    }
+    .home-hero h1 {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .home-hero h1 span { color: var(--gold); }
+    .home-hero p {
+      font-size: 1.25rem;
+      color: #ccc;
+      margin-bottom: 45px;
+      font-weight: 300;
+      max-width: 600px;
+      line-height: 1.8;
+    }
 
-.hero {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 100vh; 
-}
+    .hero-actions { display: flex; gap: 20px; }
+    .btn-solid {
+      padding: 20px 45px; background: var(--gold); color: #000; text-decoration: none;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;
+      border-radius: 3px; transition: all 0.4s ease; border: 1px solid var(--gold);
+    }
+    .btn-solid:hover { background: transparent; color: var(--gold); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(212,175,55,0.15); }
 
-.about-text h2 {
-  color: #F2F2F2;
-  font-weight: 700;
-}
+    .concierge-bar {
+      background: #0a0a0a; padding: 40px 5%;
+      display: flex; justify-content: center; align-items: center; gap: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap;
+    }
+    .concierge-bar span { font-size: 0.9rem; color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-weight: 600; }
+    .concierge-links { display: flex; gap: 15px; flex-wrap: wrap; }
+    .c-link {
+      color: var(--text-muted); text-decoration: none; padding: 12px 25px;
+      border: 1px solid #222; border-radius: 50px; font-size: 0.85rem;
+      font-weight: 500; transition: all 0.3s; background: rgba(255,255,255,0.02);
+    }
+    .c-link:hover { color: #fff; border-color: var(--gold); background: rgba(212,175,55,0.05); }
 
-.about-text p {
-  color: rgba(255,255,255,0.9);
-  line-height: 1.6;
-  font-size: 1.05rem;
-}
+    .vip-standards { padding: 120px 5%; background: var(--black); }
+    .sec-title { text-align: center; margin-bottom: 70px; }
+    .sec-title h2 { font-size: 2.2rem; color: var(--gold); text-transform: uppercase; letter-spacing: 4px; margin-bottom: 15px; }
+    .sec-title p { color: var(--text-muted); font-weight: 300; font-size: 1.1rem; }
+    
+    .standards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .standard-box {
+      background: #0a0a0a; padding: 50px 30px; border-radius: 8px;
+      border: 1px solid #1a1a1a; transition: all 0.4s; position: relative; overflow: hidden;
+    }
+    .standard-box::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
+      background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.4s;
+    }
+    .standard-box:hover { transform: translateY(-10px); border-color: #333; }
+    .standard-box:hover::before { transform: scaleX(1); }
+    .standard-box i { font-size: 2.5rem; color: var(--gold); margin-bottom: 25px; display: block; }
+    .standard-box h3 { font-size: 1.2rem; margin-bottom: 15px; color: #fff; letter-spacing: 1px; }
+    .standard-box p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
 
-.service-card h3 {
-  color: #F2F2F2;
-  font-weight: 700;
-}
+    .fleet-showcase { padding: 100px 0; background: #080808; border-top: 1px solid #111; overflow: hidden; }
+    .swiper-slide { transition: 0.4s; opacity: 0.5; transform: scale(0.9); }
+    .swiper-slide-active { opacity: 1; transform: scale(1); }
+    
+    .fleet-card { position: relative; border-radius: 10px; overflow: hidden; height: 450px; }
+    .fleet-card img { width: 100%; height: 100%; object-fit: cover; }
+    .fleet-card-overlay {
+      position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px 30px;
+      background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, transparent 100%);
+    }
+    .fleet-card h3 { color: #fff; font-size: 1.8rem; margin-bottom: 10px; }
+    .fleet-card p { color: var(--gold); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+    .btn-slide {
+      display: inline-block; padding: 12px 25px; border: 1px solid var(--gold);
+      color: #fff; text-decoration: none; font-size: 0.8rem; text-transform: uppercase;
+      transition: 0.3s;
+    }
+    .btn-slide:hover { background: var(--gold); color: #000; }
 
-.service-card p {
-  color: rgba(255,255,255,0.9);
-  line-height: 1.5;
-  font-size: 1rem;
-}
+    .trust-section { padding: 60px 5%; background: var(--black); border-top: 1px solid #111; text-align: center; }
+    .trust-title { color: #555; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 30px; }
+    .partners-row { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; opacity: 0.4; filter: grayscale(1); transition: 0.3s; }
+    .partners-row:hover { opacity: 0.8; }
+    .partner-logo { font-size: 1.5rem; font-weight: 700; font-family: serif; letter-spacing: 2px; }
 
-.service-card i {
-  color: #F2F2F2;
-}
-
-.car-card h3 {
-  color: #F2F2F2;
-  font-weight: 700;
-}
-
-.car-card p {
-  color: rgba(255,255,255,0.9);
-  line-height: 1.5;
-}
-
-.car-card .stars {
-  color: #F2F2F2;
-}
-
-@media (max-width: 1024px) {
-  .hero {
-    background-size: cover;
-    background-position: center;
-  }
-
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-image img {
-    width: 90%;
-    margin-top: 20px;
-  }
-
-  .car-card img {
-    height: auto;
-    width: 100%;
-  }
-
-  .about-text p {
-    font-size: 1rem;
-  }
-
-  .service-card p,
-  .car-card p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .top-bar {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 15px 0;
-  }
-
-  .logo img {
-    width: 130px;
-    height: auto;
-  }
-
-  .nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .nav a {
-    font-size: 15px;
-    padding: 6px 0;
-  }
-
-  .hero h1 {
-    font-size: 1.7rem;
-    text-align: center;
-  }
-
-  .hero p {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .car-card {
-    width: 85%;
-    margin: 0 auto 20px;
-  }
-
-  .review-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .review-card {
-    width: 90%;
-    margin-bottom: 15px;
-  }
-
-  footer .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-  }
-
-  .footer-bottom-inner {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .socials {
-    justify-content: center;
-  }
-
-  .about-text p {
-    font-size: 0.95rem;
-    line-height: 1.55;
-  }
-
-  .service-card p,
-  .car-card p {
-    font-size: 0.95rem;
-    line-height: 1.45;
-  }
-}
-
-
-@media (max-width: 480px) {
-  body {
-    font-size: 15px;
-    padding: 0 10px;
-  }
-
-  .logo img {
-    width: 100px;
-  }
-
-  .nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav a {
-    font-size: 14px;
-  }
-
-  .hero-content {
-    padding: 20px;
-  }
-
-  .hero h1 {
-    font-size: 1.4rem;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .about-image img {
-    width: 100%;
-  }
-
-  .service-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .service-card {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .review-card {
-    width: 100%;
-  }
-
-  footer .footer-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .socials {
-    justify-content: center;
-  }
-
-  .about-text h2 {
-    font-size: 1.4rem;
-  }
-
-  .about-text p,
-  .service-card p,
-  .car-card p {
-    font-size: 0.9rem;
-    line-height: 1.45;
-  }
-}
-
-@media (max-width: 360px) {
-  .nav a {
-    font-size: 13px;
-  }
-
-  .logo img {
-    width: 80px;
-  }
-
-  .hero h1 {
-    font-size: 1.1rem;
-  }
-
-  .socials {
-    justify-content: center;
-  }
-
-  .about-text p,
-  .service-card p,
-  .car-card p {
-    font-size: 0.85rem;
-    line-height: 1.35;
-  }
-}
-</style>
-
-<meta name="google-site-verification" content="-Y_cD2TxUdQWb9m8TWymkimy_9KUSOwr7Iybdzy4a9c" />
+    @media (max-width: 992px) {
+      .home-hero h1 { font-size: 2.8rem; }
+      .concierge-bar { flex-direction: column; text-align: center; gap: 20px; }
+      .swiper-slide { opacity: 1; transform: scale(1); }
+      .fleet-card { height: 350px; }
+    }
+    @media (max-width: 576px) {
+      .home-hero h1 { font-size: 2.2rem; }
+      .hero-actions { flex-direction: column; }
+    }
+  </style>
 </head>
 <body>
 
-  <header class="top-bar">
-<div class="logo">
-  <a href="home.html">
-    <img src="photo/лого вариант 2.jpg" alt="Viptransport логотип">
-  </a>
-</div>
-
-  <nav class="nav">
-    <a href="home.html">Главная</a>
-    <a href="servis.html">Услуги</a>
-    <a href="avto.html">Автопарк</a>
-    <a href="about-us.html">О нас</a>
-    <a href="contacts.html">Контакты</a>
-  </nav>
-</header>
-
-  <section class="hero" style="background-image: url('photo/mersmain.jpg');">
-    <div class="hero-content">
-      <h1>Комфортные трансферы по всему Казахстану</h1>
-      <p>Премиальные автомобили и профессиональные водители для любых поездок</p>
-      <div class="hero-buttons">
-        <a href="servis.html" class="btn">Наши услуги</a>
-        <a href="contacts.html" class="btn btn-outline">Связаться</a>
-      </div>
+  <header class="header">
+    <div class="logo">
+      <a href="home.html" class="logo-text">VIP<span>TRANSPORT</span></a>
     </div>
-  </section>
-
-  <section class="about" id="about">
-    <div class="about-container">
-      <div class="about-text">
-        <h2>О нас</h2>
-        <p>
-          Viptransport — это сервис премиальных трансферов по всему Казахстану.
-          Мы предоставляем автомобили люкс-класса с профессиональными водителями
-          для деловых поездок, встреч в аэропорту, туристических маршрутов и мероприятий.
-        </p>
-        <p>
-          Наша миссия — сделать каждую поездку максимально комфортной, безопасной и престижной.
-          Мы гордимся высоким уровнем сервиса, индивидуальным подходом и надёжностью.
-        </p>
-        <a href="about-us.html" class="btn">Подробнее</a>
-      </div>
-      <div class="about-image">
-        <img loading="lazy" src="photo/final.png">
-      </div>
+    <nav class="nav">
+      <a href="home.html" class="active">Главная</a>
+      <a href="avto.html">Автопарк</a>
+      <a href="servis.html">Услуги</a>
+      <a href="about-us.html">О нас</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="header-contacts">
+      <a href="tel:+77017605597" class="header-phone">+7 701 760 5597</a>
     </div>
-  </section>
+  </header>
 
-  <!-- Автопарк -->
-  <section class="car-slider" id="cars">
-   <h2 class="section-title" style="text-align:center; font-size:2rem; font-weight:700; margin-bottom:10px; color:#fff;">
-  Наш Автопарк
-</h2>
-
-<p class="section-subtitle" style="text-align:center; font-size:1.1rem; color:#d6d6d6; margin-bottom:40px;">
-  У нас более 20 автомобилей люкс сегмента и качества
-</p>
-
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="car-card">
-            <img loading="lazy" src="photo/w22.jpg">
-            <h3>Mercedes S-class w223</h3>
-            <div class="stars">★★★★☆</div>
-            <p><b>S-class w223:</b> Роскошь, технологии и комфорт для поездок.</p>
-            <a href="https://wa.me/77017605597" class="btn-outline">Арендовать</a>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="car-card">
-            <img loading="lazy" src="photo/v-class.jpg">
-            <h3>Mercedes V-class</h3>
-            <div class="stars">★★★★★</div>
-            <p><b>V-class:</b> Идеален для деловых поездок и путешествий.</p>
-            <a href="https://wa.me/77017605597" class="btn-outline">Арендовать</a>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="car-card">
-            <img loading="lazy" src="photo/sprinter.jpg">
-            <h3>Mercedes Sprinter VIP</h3>
-            <div class="stars">★★★★☆</div>
-            <p><b>Sprinter VIP:</b> Просторный и удобный для групп.</p>
-            <a href="https://wa.me/77017605597" class="btn-outline">Арендовать</a>
-          </div>
+  <main>
+    <section class="home-hero">
+      <div class="home-hero-content" data-aos="fade-up" data-aos-duration="1200">
+        <h1>Ваш <span>Статус</span><br>на дорогах Казахстана</h1>
+        <p>Аренда представительских автомобилей с личным водителем. Безупречный сервис, абсолютная конфиденциальность и пунктуальность.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/77017605597" class="btn-solid">Забронировать</a>
         </div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <section class="services" id="services">
-  <h2 class="section-title">Наши услуги</h2>
-  <a href="servis.html#city" class="btn-more"> <i class="fas fa-arrow-right"></i>
-</a>
-
-  <p class="section-subtitle">Viptransport предлагает комфортные и надёжные решения для любых ситуаций</p>
-
-  <div class="service-cards">
-    <div class="service-card">
-      
-      <h3><i class="fas fa-taxi"></i> Индивидуальные поездки</h3>
-      <p>Быстрые и комфортные трансферы по Алматы, и другим городам. Подача точно ко времени, ожидание по тарифу, конфиденциальность и вежливый сервис.</p>
-    </div>
-
-    <div class="service-card">
-      
-      <h3><i class="fas fa-helicopter"></i> Вертолётная прогулка</h3>
-      <p>Уникальная и незабываемые прогулка на вертолёте.</p>
-    </div>
-
-    <div class="service-card">
-      
-      <h3><i class="fas fa-ring"></i> Транспортное сопровождение мероприятий</h3>
-      <p>Кортежи из S-/E-/V-class, декор авто, точная координация маршрутов и времени подачи.</p>
-    </div>
-
-
-    <div class="service-card">
-      
-      <h3><i class="fas fa-landmark"></i> Экскурсии </h3>
-      <p>Путешествуйте по Казахстану в комфорте с нашими водителями.</p>
-
     </section>
 
-  <section class="why-us">
-    <h2>Почему выбирают нас</h2>
-    <div class="reasons">
-      <div class="reason">
-        <h3>Безопасность</h3>
-        <p>Опытные водители и надёжные автомобили.</p>
-      </div>
-      <div class="reason">
-        <h3>Всегда вовремя</h3>
-        <p>Подача авто точно в срок.</p>
-      </div>
-      <div class="reason">
-        <h3>Комфорт</h3>
-        <p>Премиальные авто и удобство на каждом километре.</p>
-      </div>
-      <div class="reason">
-        <h3>Поддержка 24/7</h3>
-        <p>Мы всегда на связи для клиентов.</p>
+    <div class="concierge-bar" data-aos="fade-up">
+      <span>Быстрый выбор:</span>
+      <div class="concierge-links">
+        <a href="https://wa.me/77017605597?text=Интересует%20трансфер%20в%20аэропорт" class="c-link">В аэропорт</a>
+        <a href="https://wa.me/77017605597?text=Интересует%20аренда%20на%20день" class="c-link">Аренда на день</a>
+        <a href="https://wa.me/77017605597?text=Нужен%20кортеж%20на%20свадьбу" class="c-link">Свадебный кортеж</a>
+        <a href="https://wa.me/77017605597?text=Интересует%20межгород" class="c-link">Поездка межгород</a>
       </div>
     </div>
-  </section>
 
-  <section class="reviews">
-    <h2>Отзывы клиентов</h2>
-    <div class="review-cards">
-      <div class="review-card">
-        <img class="review-img" src="photo/onzyv1.png">
-        <p>“Чистый салон, вода, помогли с багажом. Рекомендую!”</p>
-        <div class="stars">★★★★★</div>
-        <span>Ержан, Шымкент</span>
+    <section class="vip-standards">
+      <div class="container">
+        <div class="sec-title" data-aos="fade-up">
+          <h2>Стандарты Сервиса</h2>
+          <p>Детали, которые делают поездку идеальной</p>
+        </div>
+        <div class="standards-grid">
+          <div class="standard-box" data-aos="fade-up" data-aos-delay="0">
+            <i class="fa-solid fa-user-tie"></i>
+            <h3>Дресс-код Business</h3>
+            <p>Профессиональные водители в строгих классических костюмах. Знание делового этикета и субординации.</p>
+          </div>
+          <div class="standard-box" data-aos="fade-up" data-aos-delay="100">
+            <i class="fa-solid fa-clock"></i>
+            <h3>Точность до минуты</h3>
+            <p>Гарантированная подача автомобиля за 15 минут до назначенного времени. Мы бережем ваше время.</p>
+          </div>
+          <div class="standard-box" data-aos="fade-up" data-aos-delay="200">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Безопасность</h3>
+            <p>Ежедневный технический контроль автопарка и медицинский осмотр водителей перед каждым выездом.</p>
+          </div>
+        </div>
       </div>
-      <div class="review-card">
-        <img class="review-img" src="photo/onzyv2.png">
-        <p>“Бронировали на свадьбу кортеж — подача минута в минуту.”</p>
-        <div class="stars">★★★★★</div>
-        <span>Ольга, Астана</span>
-      </div>
+    </section>
 
-      <div class="review-card">
-        <img loading="lazy" src="photo/otzyv3.png" class="review-img">
-        <p>“Машина подана вовремя, водитель вежливый. Отличный сервис!”</p>
-        <div class="stars">★★★★★</div>
-        <span>Николай, Новосибирск</span>
+    <section class="fleet-showcase">
+      <div class="sec-title" data-aos="fade-up">
+        <h2>Наш Автопарк</h2>
+        <p>Только современные модели в максимальной комплектации</p>
       </div>
-      <div class="review-card">
-        <img loading="lazy" src="photo/otzyv4.png" class="review-img">
-        <p>“Заказывали трансфер для делегации — всё прошло идеально.”</p>
-        <div class="stars">★★★★★</div>
-        <span>Асема, Алматы</span>
+      
+      <div class="swiper fleetSwiper" data-aos="fade-in" data-aos-delay="200">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="fleet-card">
+              <img src="photo/w23.jpg" alt="Mercedes S-Class W223">
+              <div class="fleet-card-overlay">
+                <h3>Mercedes S-Class W223</h3>
+                <p>Представительский седан</p>
+                <a href="avto.html" class="btn-slide">Смотреть детали</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="fleet-card">
+              <img src="photo/Toyota.jpg" alt="Toyota Land Cruiser 300">
+              <div class="fleet-card-overlay">
+                <h3>Toyota Land Cruiser 300</h3>
+                <p>Премиальный внедорожник</p>
+                <a href="avto.html" class="btn-slide">Смотреть детали</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="fleet-card">
+              <img src="photo/v-class.jpg" alt="Mercedes V-Class">
+              <div class="fleet-card-overlay">
+                <h3>Mercedes V-Class</h3>
+                <p>Бизнес-минивэн</p>
+                <a href="avto.html" class="btn-slide">Смотреть детали</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="fleet-card">
+              <img src="photo/sprinter.jpg" alt="Mercedes Sprinter">
+              <div class="fleet-card-overlay">
+                <h3>Mercedes Sprinter VIP</h3>
+                <p>Микроавтобус Люкс</p>
+                <a href="avto.html" class="btn-slide">Смотреть детали</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination" style="margin-top: 30px; position: static;"></div>
       </div>
-    </div>
-  </section>
+      
+      <div style="text-align: center; margin-top: 50px;" data-aos="fade-up">
+        <a href="avto.html" class="btn-solid" style="background: transparent; color: var(--gold);">Весь автопарк <i class="fa-solid fa-arrow-right" style="margin-left:10px;"></i></a>
+      </div>
+    </section>
 
-  <section class="cta" style="background-image: url('photo/mersmain2.png');">
-    <div class="cta-content">
-      <h2>Забронируйте трансфер прямо сейчас</h2>
-      <a href="https://wa.me/77017605597" class="btn">Оставить заявку</a>
-    </div>
-  </section>
+    <section class="trust-section">
+      <div class="container">
+        <div class="trust-title">Нам доверяют обслуживание мероприятий высшего уровня</div>
+        <div class="partners-row">
+          <div class="partner-logo">FORUM KZ</div>
+          <div class="partner-logo">RIXOS HOTELS</div>
+          <div class="partner-logo">BUSINESS CLUB</div>
+          <div class="partner-logo">ASTANA EXPO</div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
-  <div class="footer-top">
     <div class="footer-grid">
-      
       <div class="footer-column">
-        <div class="footer-brand">
-          <div class="logo">Viptransport</div>
-          <p class="footer-desc">
-            Премиальные трансферы по Казахстану — безопасность, комфорт и пунктуальность. 
-            Более 50 автомобилей люкс-класса и круглосуточная поддержка.
-          </p>
+        <h4>VIPTRANSPORT</h4>
+        <p>Премиальные трансферы по Казахстану. Безопасность, комфорт и строгая пунктуальность.</p>
+      </div>
+      <div class="footer-column">
+        <h4>КОНТАКТЫ</h4>
+        <a href="tel:+77017605597">+7 701 760 5597</a>
+        <a href="mailto:info@viptransport.kz">info@viptransport.kz</a>
+      </div>
+      <div class="footer-column">
+        <h4>МЫ В СОЦСЕТЯХ</h4>
+        <div class="social-icons">
+          <a href="https://wa.me/77017605597"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://t.me/viptransportkz"><i class="fab fa-telegram-plane"></i></a>
+          <a href="https://www.instagram.com/vip.transport.kz"><i class="fab fa-instagram"></i></a>
         </div>
+        <a href="https://2gis.kz/almaty/geo/70000001038059610" target="_blank" class="map-link">Открыть в 2ГИС</a>
       </div>
-
-      <div class="footer-column">
-        <h4>Контакты</h4>
-        <p><a href="tel:+7 701 760 5597">+7 701 760 5597</a></p>
-     <p><a href="mailto:info.viptransport@mail.ru">info@viptransport@mail.ru</a></p>
-      </div>
-
-      <div class="footer-column">
-        <h4>Услуги</h4>
-        <ul class="footer-links">
-          <li>Трансфер в аэропорт</li>
-          <li>Свадебные мероприятия</li>
-          <li>Экскурсии и туры</li>
-          <li>Деловые поездки</li>
-          <li>Аренда микроавтобусов</li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h4>Мы в соцсетях</h4>
-        <div class="socials">
-          <a href="https://wa.me/77017605597" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://t.me/viptransportkz" class="social-link" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
-          <a href="https://www.instagram.com/vip.transport.kz?igsh=MXg1Ymg2djRzODUzcA==" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-      <h4 style="margin-top:18px;">Как нас найти</h4>
-<a href="https://2gis.kz/almaty/geo/70000001038059610" 
-   target="_blank" 
-   class="map-btn">
-  <i class="fa-solid fa-location-dot"></i> Открыть в 2ГИС
-</a>
-
-<style>
-.map-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #0A2647;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  margin-top: 8px;
-}
-.map-btn:hover {
-  background: #051fb5;
-  color: #000;
-  transform: translateY(-2px);
-}
-</style>
-
-      </div>
-
     </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div class="footer-bottom-inner">
-      <p>&copy; 2025 Viptransport. Все права защищены.</p>
-      <p class="small-note">Разработка и поддержка — Viptransport</p>
+    <div style="text-align: center; color: #555; font-size: 0.8rem; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px;">
+      &copy; 2026 Viptransport. Все права защищены.
     </div>
-  </div>
-</footer>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
+    AOS.init({ duration: 800, once: true, offset: 50 });
+    
+    var swiper = new Swiper(".fleetSwiper", {
+      slidesPerView: "auto",
+      centeredSlides: true,
       spaceBetween: 30,
       loop: true,
-      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      autoplay: { delay: 3500, disableOnInteraction: false },
       pagination: { el: ".swiper-pagination", clickable: true },
       breakpoints: {
-        0: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1200: { slidesPerView: 3 }
+        320: { slidesPerView: 1, spaceBetween: 20 },
+        768: { slidesPerView: 2, centeredSlides: false },
+        1024: { slidesPerView: 3, centeredSlides: true }
       }
     });
   </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="home.js"></script>
 </body>
 </html>
