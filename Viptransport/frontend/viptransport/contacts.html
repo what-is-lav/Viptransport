@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17821622688"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17821622688');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — Viptransport | Премиум Трансферы</title>
+
+  <meta name="description" content="Связаться с Viptransport: телефон, WhatsApp, email, форма. Круглосуточная поддержка VIP клиентов.">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* =========================================
+       УНИКАЛЬНЫЕ СТИЛИ СТРАНИЦЫ КОНТАКТОВ
+       ========================================= */
+    .contacts-premium {
+      padding: 140px 0 100px; 
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: stretch;
+    }
+
+    /* Левая колонка: Карточки контактов */
+    .info-card {
+      background: #0f0f0f;
+      border: 1px solid #1a1a1a;
+      border-radius: 12px;
+      padding: 25px 30px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      transition: 0.3s ease;
+    }
+    .info-card:hover {
+      border-color: #333;
+      transform: translateY(-3px);
+    }
+
+    .card-icon {
+      font-size: 1.8rem;
+      color: var(--gold);
+      margin-right: 25px;
+      width: 30px;
+      text-align: center;
+    }
+
+    .card-text-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-label {
+      font-size: 0.7rem;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+
+    .card-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    a.card-value:hover {
+      color: var(--gold);
+    }
+
+    /* Кнопки мессенджеров */
+    .messengers-row {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .btn-msg {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: 0.3s;
+      border: none;
+    }
+    .btn-msg:hover {
+      filter: brightness(1.1);
+      transform: translateY(-2px);
+    }
+    .btn-wa { background-color: #25D366; }
+    .btn-tg { background-color: #2AA1C0; }
+
+    /* =========================================
+       ПРАВАЯ КОЛОНКА: АДРЕС И КАРТА (ИДЕАЛ)
+       ========================================= */
+    .address-header {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+    .address-pin {
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-right: 15px;
+      margin-top: 2px;
+    }
+    .address-text-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .address-label {
+      color: #666;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+    }
+    .address-value {
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* Сама матовая заглушка карты */
+    .map-placeholder {
+      background: #080808;
+      border: 1px solid #1a1a1a;
+      border-radius: 12px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+    .map-placeholder:hover {
+      border-color: var(--gold);
+      background: #0c0c0c;
+      box-shadow: 0 10px 40px rgba(212, 175, 55, 0.05);
+    }
+    
+    .map-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+    .map-placeholder:hover .map-content {
+      transform: scale(1.05);
+    }
+    .map-content i {
+      font-size: 4.5rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .map-content span {
+      color: var(--gold);
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* Адаптив */
+    @media (max-width: 992px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+      .map-placeholder { height: 320px; }
+    }
+    @media (max-width: 576px) {
+      .messengers-row { flex-direction: column; gap: 15px; }
+      .card-value { font-size: 1.1rem; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <a href="home.html" class="logo-text">VIP<span>TRANSPORT</span></a>
+    </div>
+    <nav class="nav">
+      <a href="home.html" class="nav-link">ГЛАВНАЯ</a>
+      <a href="servis.html" class="nav-link">УСЛУГИ</a>
+      <a href="avto.html" class="nav-link">АВТОПАРК</a>
+      <a href="about-us.html" class="nav-link">О НАС</a>
+      <a href="contacts.html" class="nav-link active">КОНТАКТЫ</a>
+    </nav>
+    <div class="header-contacts">
+      <a href="tel:+77017605597" class="header-phone">+7 701 760 5597</a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="contacts-premium container">
+      
+      <div class="contact-grid">
+        
+        <div data-aos="fade-right">
+          
+          <div class="info-card">
+            <i class="fa-solid fa-phone card-icon" style="transform: scaleX(-1);"></i> 
+            <div class="card-text-block">
+              <span class="card-label">Круглосуточный телефон:</span>
+              <a href="tel:+77017605597" class="card-value">+7 701 760 5597</a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <i class="fa-solid fa-envelope card-icon"></i>
+            <div class="card-text-block">
+              <span class="card-label">Email для запросов:</span>
+              <a href="mailtoinfo@viptransport.kz" class="card-value">info.viptransport@mail.ru</a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <i class="fa-solid fa-clock card-icon"></i>
+            <div class="card-text-block">
+              <span class="card-label">График работы:</span>
+              <span class="card-value">24/7 — Мы всегда на связи</span>
+            </div>
+          </div>
+
+          <div class="messengers-row">
+            <a href="https://wa.me/77017605597" class="btn-msg btn-wa">
+              <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i> WhatsApp
+            </a>
+            <a href="https://t.me/viptransportkz" class="btn-msg btn-tg">
+              <i class="fab fa-telegram-plane" style="font-size: 1.3rem;"></i> Telegram
+            </a>
+          </div>
+
+        </div>
+
+        <div data-aos="fade-left" data-aos-delay="100">
+          
+          <div class="address-header">
+            <i class="fa-solid fa-location-dot address-pin"></i>
+            <div class="address-text-wrapper">
+               <span class="address-label">НАШ ОФИС В АЛМАТЫ:</span>
+               <span class="address-value">проспект Аль-Фараби, 17/1, БЦ "Нурлы Тау", блок 5Б</span>
+            </div>
+          </div>
+          
+          <a href="https://2gis.kz/almaty/geo/70000001038059610" target="_blank" class="map-placeholder">
+            <div class="map-content">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Открыть в 2ГИС</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h4>Viptransport</h4>
+        <p>Премиальные трансферы по Казахстану. Безопасность, комфорт и строгая пунктуальность.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Контакты</h4>
+        <a href="tel:+77017605597">+7 701 760 5597</a>
+        <a href="mailto:info@viptransport.kz">info.viptransport@mail.ru</a>
+      </div>
+      <div class="footer-column">
+        <h4>Мы в соцсетях</h4>
+        <div class="social-icons">
+          <a href="https://wa.me/77017605597"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://t.me/viptransportkz"><i class="fab fa-telegram-plane"></i></a>
+          <a href="https://www.instagram.com/vip.transport.kz"><i class="fab fa-instagram"></i></a>
+        </div>
+        <a href="https://2gis.kz/almaty/geo/70000001038059610" target="_blank" class="map-link">Открыть в 2ГИС</a>
+      </div>
+    </div>
+    <div style="text-align: center; color: #555; font-size: 0.8rem; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px;">
+      &copy; 2026 Viptransport. Все права защищены.
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+</body>
+</html>
