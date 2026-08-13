@@ -1,273 +1,238 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17821622688"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17821622688');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17821622688"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17821622688');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Услуги — Viptransport | Премиум Трансферы</title>
-  <meta name="description" content="Трансферы в аэропорт, деловые поездки, свадебные кортежи и вертолетные прогулки от Viptransport.">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Автопарк — Viptransport | Премиум Трансферы</title>
   
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- FontAwesome для стрелочек -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <style>
-
-    .services-hero {
-      padding: 160px 5% 80px;
-      text-align: center;
-      background: #050505;
-    }
+    :root { --gold: #d4af37; }
+    body { background: #050505; color: #fff; font-family: 'Montserrat', sans-serif; margin: 0; }
     
-    .services-title {
-      font-size: 3rem;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      margin-bottom: 20px;
-    }
-
-    .services-subtitle {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 40px;
-      padding: 0 5% 100px;
-      max-width: var(--container-width);
-      margin: 0 auto;
-    }
-
-    .service-card {
-      background: #0a0a0a;
-      border: 1px solid #1a1a1a;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: 0.4s ease;
+    /* Компактная шапка */
+    .header {
       display: flex;
-      flex-direction: column;
-    }
-
-    .service-card:hover {
-      border-color: var(--gold);
-      transform: translateY(-8px);
-      box-shadow: 0 15px 40px rgba(212, 175, 55, 0.08);
-    }
-
-    .sc-image {
-      width: 100%;
-      height: 250px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .sc-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.5s ease;
-    }
-
-    .service-card:hover .sc-image img {
-      transform: scale(1.05);
-    }
-
-    .sc-content {
-      padding: 35px 30px;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .sc-icon {
-      width: 50px;
-      height: 50px;
-      background: rgba(212, 175, 55, 0.1);
-      border-radius: 50%;
-      display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-size: 1.5rem;
-      margin-bottom: 20px;
+      padding: 15px 5%;
+      background: #050505;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #1a1a1a;
     }
-
-    .sc-content h3 {
-      font-size: 1.5rem;
+    .logo-text {
+      font-size: 1.3rem;
+      font-weight: 700;
       color: #fff;
-      margin-bottom: 15px;
-      letter-spacing: 1px;
-    }
-
-    .sc-content p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      flex-grow: 1;
-    }
-
-    .btn-service {
-      align-self: flex-start;
-      padding: 12px 25px;
-      border: 1px solid var(--gold);
-      color: var(--gold);
       text-decoration: none;
-      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    .logo-text span {
+      color: var(--gold);
+    }
+    .nav {
+      display: flex;
+      gap: 25px;
+    }
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.8rem;
       text-transform: uppercase;
-      font-size: 0.85rem;
-      border-radius: 4px;
-      transition: 0.3s ease;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .nav a:hover, .nav a.active {
+      color: var(--gold);
+    }
+    .header-phone {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+    .header-phone:hover {
+      color: var(--gold);
     }
 
-    .btn-service:hover {
-      background: var(--gold);
-      color: #000;
-    }
-
-    @media (max-width: 768px) {
-      .services-title { font-size: 2.2rem; }
-      .services-grid { grid-template-columns: 1fr; }
-    }
+    .cars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
+    .car-card { background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+    
+    /* Стили для Слайдера */
+    .swiper { width: 100%; height: 260px; position: relative; }
+    .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+    
+    /* Стрелочки и пагинация */
+    .swiper-button-next, .swiper-button-prev { color: var(--gold) !important; transform: scale(0.6); }
+    .swiper-pagination-bullet-active { background: var(--gold) !important; }
+    
+    .cc-content { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; }
+    .cc-content h3 { color: #fff; margin: 0 0 10px 0; font-size: 1.4rem; }
+    .car-specs { margin: 5px 0 15px 0; color: var(--gold); font-size: 0.85rem; text-transform: uppercase; }
+    
+    .btn-car { display: inline-block; padding: 12px 25px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; margin-top: auto; text-align: center; border-radius: 4px; transition: 0.3s; text-transform: uppercase; font-size: 0.85rem; }
+    .btn-car:hover { background: var(--gold); color: #000; }
   </style>
-
 </head>
 <body>
 
-  
   <header class="header">
     <div class="logo">
       <a href="index.html" class="logo-text">VIP<span>TRANSPORT</span></a>
     </div>
     <nav class="nav">
-      <a href="index.html" class="active">Главная</a>
-      <a href="avto.html">Автопарк</a>
-      <a href="servis.html">Услуги</a>
-      <a href="about-us.html">О нас</a>
-      <a href="contacts.html">Контакты</a>
+      <a href="index.html">ГЛАВНАЯ</a>
+      <a href="avto.html" class="active">АВТОПАРК</a>
+      <a href="servis.html">УСЛУГИ</a>
+      <a href="about-us.html">О НАС</a>
+      <a href="contacts.html">КОНТАКТЫ</a>
     </nav>
-    <div class="header-contacts">
-      <a href="tel:+77017605597" class="header-phone">+7 701 760 5597</a>
-    </div>
+    <a href="https://wa.me/77017605597" class="header-phone">+7 701 760 5597</a>
   </header>
 
-  <main class="page">
-    
-    <section class="services-hero" data-aos="fade-down">
-      <h1 class="services-title">Наши Услуги</h1>
-      <p class="services-subtitle">Мы предлагаем комплексные решения в сфере транспортного обслуживания премиум-класса. Ваш комфорт и безопасность на каждом этапе маршрута.</p>
-    </section>
-
-    <section class="services-grid">
+  <main>
+    <section class="cars-grid">
       
-      <div class="service-card" data-aos="fade-up">
-        <div class="sc-image">
-          <img src="photo/delovie poezdki.jpg" alt="Деловые поездки">
+      <!-- 1. Mercedes S-Class (W222) -->
+      <div class="car-card">
+        <div class="swiper swiper-car-1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="photo/w22.jpg" alt="W222 Снаружи"></div>
+            <div class="swiper-slide"><img src="photo/w22 салон.jpg" alt="W222 Салон 1"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-        <div class="sc-content">
-          <div class="sc-icon"><i class="fa-solid fa-briefcase"></i></div>
-          <h3>Деловые поездки</h3>
-          <p>Транспортное сопровождение бизнеса. Автомобили S-Class и V-Class для встреч с партнерами, форумов и конференций. Абсолютная пунктуальность.</p>
-          <a href="https://wa.me/77017605597?text=Интересуют%20деловые%20поездки" class="btn-service">Забронировать</a>
-        </div>
-      </div>
-
-      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="sc-image">
-          <img src="photo/w22.jpg" alt="Трансфер в аэропорт">
-        </div>
-        <div class="sc-content">
-          <div class="sc-icon"><i class="fa-solid fa-plane-arrival"></i></div>
-          <h3>Встреча в Аэропорту</h3>
-          <p>Встреча с именной табличкой, помощь с багажом и комфортный трансфер до отеля или офиса. Отслеживание рейсов для гарантии своевременной подачи авто.</p>
-          <a href="https://wa.me/77017605597?text=Нужен%20трансфер%20в%20аэропорт" class="btn-service">Забронировать</a>
+        <div class="cc-content">
+          <h3>Mercedes S-Class (W222)</h3>
+          <div class="car-specs">Классика</div>
+          <a href="https://wa.me/77017605597" class="btn-car">Забронировать</a>
         </div>
       </div>
 
-      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="sc-image">
-          <img src="photo/sbadba.png" alt="Свадебные кортежи">
+      <!-- 2. Mercedes S-Class (W223) -->
+      <div class="car-card">
+        <div class="swiper swiper-car-2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="photo/w23.jpg" alt="W223 Снаружи"></div>
+            <div class="swiper-slide"><img src="photo/w23 салон.jpg" alt="W223 Салон 1"></div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-        <div class="sc-content">
-          <div class="sc-icon"><i class="fa-solid fa-rings-wedding"></i></div>
-          <h3>Свадебные кортежи</h3>
-          <p>Роскошные автомобили для вашего главного дня. Идеально чистые салоны, профессиональные водители и возможность составления кортежа в едином стиле.</p>
-          <a href="https://wa.me/77017605597?text=Интересует%20свадебный%20кортеж" class="btn-service">Забронировать</a>
+        <div class="cc-content">
+          <h3>Mercedes S-Class (W223)</h3>
+          <div class="car-specs">Новый кузов</div>
+          <a href="https://wa.me/77017605597" class="btn-car">Забронировать</a>
         </div>
       </div>
 
-      <div class="service-card" data-aos="fade-up">
-        <div class="sc-image">
-          <img src="photo/vertolet.jpg" alt="Вертолетные прогулки">
+      <!-- 3. Mercedes V-Class -->
+      <div class="car-card">
+        <div class="swiper swiper-car-3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="photo/v-class.jpg" alt="V-Class Снаружи"></div>
+            <div class="swiper-slide"><img src="photo/виана салон 2.jpg" alt="V-Class Салон"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-        <div class="sc-content">
-          <div class="sc-icon"><i class="fa-solid fa-helicopter"></i></div>
-          <h3>Вертолетные прогулки</h3>
-          <p>Эксклюзивная услуга для особых случаев. Трансферы в труднодоступные локации, экскурсии над городом и горами Заилийского Алатау.</p>
-          <a href="https://wa.me/77017605597?text=Интересует%20вертолет" class="btn-service">Забронировать</a>
+        <div class="cc-content">
+          <h3>Mercedes-Benz V-Class</h3>
+          <div class="car-specs">Минивэн</div>
+          <a href="https://wa.me/77017605597" class="btn-car">Забронировать</a>
         </div>
       </div>
 
-      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="sc-image">
-          <img src="photo/ecskursia.jpg" alt="Экскурсии и туры">
+      <!-- 4. Toyota Land Cruiser -->
+      <div class="car-card">
+        <div class="swiper swiper-car-4">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="photo/Toyota.jpg" alt="Toyota Снаружи"></div>
+            <div class="swiper-slide"><img src="photo/тойота салон1 .jpg" alt="Toyota Салон"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-        <div class="sc-content">
-          <div class="sc-icon"><i class="fa-solid fa-mountain-sun"></i></div>
-          <h3>Экскурсии и туры</h3>
-          <p>Индивидуальные поездки по живописным местам Казахстана (Чарын, Кольсай, Медео). Комфортные внедорожники Toyota LC 300 и минивэны для групп.</p>
-          <a href="https://wa.me/77017605597?text=Интересует%20экскурсия" class="btn-service">Забронировать</a>
+        <div class="cc-content">
+          <h3>Toyota Land Cruiser</h3>
+          <div class="car-specs">Внедорожник</div>
+          <a href="https://wa.me/77017605597" class="btn-car">Забронировать</a>
+        </div>
+      </div>
+
+      <!-- 5. Mercedes-Benz Sprinter -->
+      <div class="car-card">
+        <div class="swiper swiper-car-5">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="photo/sprinter.jpg" alt="Sprinter Снаружи"></div>
+            <div class="swiper-slide"><img src="photo/спринтер салон 2.jpg" alt="Sprinter Салон "></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="cc-content">
+          <h3>Mercedes-Benz Sprinter</h3>
+          <div class="car-specs">Микроавтобус</div>
+          <a href="https://wa.me/77017605597" class="btn-car">Забронировать</a>
+        </div>
+      </div>
+
+      <!-- 6. Audi Q5 e-tron -->
+      <div class="car-card">
+        <div class="swiper swiper-car-6">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="photo/audi 5Q e-tron.jpg" alt="Audi Снаружи"></div>
+            <div class="swiper-slide"><img src="photo/q5 салон 1.png" alt="Audi внутри"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="cc-content">
+          <h3>Audi Q5 e-tron</h3>
+          <div class="car-specs">Электро</div>
+          <a href="https://wa.me/77017605597" class="btn-car">Забронировать</a>
         </div>
       </div>
 
     </section>
-
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-grid">
-      <div class="footer-column">
-        <h4>VIPTRANSPORT</h4>
-        <p>Премиальные трансферы по Казахстану. Безопасность, комфорт и строгая пунктуальность.</p>
-      </div>
-      <div class="footer-column">
-        <h4>КОНТАКТЫ</h4>
-        <a href="tel:+77017605597" class="footer-link">+7 701 760 5597</a>
-        <a href="mailto:info@viptransport.kz" class="footer-link">info@viptransport.kz</a>
-      </div>
-      <div class="footer-column">
-        <h4>МЫ В СОЦСЕТЯХ</h4>
-        <div class="social-icons">
-          <a href="https://wa.me/77017605597"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://t.me/viptransportkz"><i class="fab fa-telegram-plane"></i></a>
-          <a href="https://www.instagram.com/vip.transport.kz"><i class="fab fa-instagram"></i></a>
-        </div>
-        <a href="https://2gis.kz/almaty/geo/70000001038059610" target="_blank" class="map-link">Открыть в 2ГИС</a>
-      </div>
-    </div>
-    <div style="text-align: center; color: #555; font-size: 0.8rem; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px;">
-      &copy; 2026 Viptransport. Все права защищены.
-    </div>
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    AOS.init({ duration: 800, once: true });
+    // Инициализация каждого слайдера отдельно
+    for (let i = 1; i <= 6; i++) {
+      new Swiper(`.swiper-car-${i}`, {
+        loop: true,
+        pagination: { el: ".swiper-pagination", clickable: true },
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      });
+    }
   </script>
 </body>
 </html>

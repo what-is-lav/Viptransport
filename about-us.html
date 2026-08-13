@@ -23,9 +23,59 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* =========================================
-       УНИКАЛЬНЫЕ СТИЛИ СТРАНИЦЫ "О НАС"
-       ========================================= */
+    :root { --gold: #d4af37; }
+    body { background: #050505; color: #fff; font-family: 'Montserrat', sans-serif; margin: 0; }
+
+    /* Компактная шапка */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      background: #050505;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .logo-text {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+    .logo-text span {
+      color: var(--gold);
+    }
+    .nav {
+      display: flex;
+      gap: 25px;
+    }
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .nav a:hover, .nav a.active {
+      color: var(--gold);
+    }
+    .header-phone {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+    .header-phone:hover {
+      color: var(--gold);
+    }
+
+    /* Уникальные стили страницы "О нас" */
     .about-hero {
       padding: 160px 5% 100px;
       background: linear-gradient(to bottom, rgba(5,5,5,0.9), rgba(5,5,5,1)), url('photo/mersmain2.png') center/cover;
@@ -43,7 +93,7 @@
 
     .about-subtitle {
       font-size: 1.2rem;
-      color: var(--text-muted);
+      color: var(--text-muted, #aaa);
       max-width: 800px;
       margin: 0 auto 50px;
       line-height: 1.8;
@@ -95,7 +145,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 60px;
       align-items: center;
-      max-width: var(--container-width);
+      max-width: var(--container-width, 1200px);
       margin: 0 auto;
     }
 
@@ -108,7 +158,7 @@
     }
 
     .content-text p {
-      color: var(--text-muted);
+      color: var(--text-muted, #aaa);
       font-size: 1rem;
       line-height: 1.8;
       margin-bottom: 20px;
@@ -188,20 +238,19 @@
 </head>
 <body>
 
-  
   <header class="header">
     <div class="logo">
       <a href="index.html" class="logo-text">VIP<span>TRANSPORT</span></a>
     </div>
     <nav class="nav">
-      <a href="index.html" class="active">Главная</a>
-      <a href="avto.html">Автопарк</a>
-      <a href="servis.html">Услуги</a>
-      <a href="about-us.html">О нас</a>
-      <a href="contacts.html">Контакты</a>
+      <a href="index.html">ГЛАВНАЯ</a>
+      <a href="avto.html">АВТОПАРК</a>
+      <a href="servis.html">УСЛУГИ</a>
+      <a href="about-us.html" class="active">О НАС</a>
+      <a href="contacts.html">КОНТАКТЫ</a>
     </nav>
     <div class="header-contacts">
-      <a href="tel:+77017605597" class="header-phone">+7 701 760 5597</a>
+      <a href="https://wa.me/77017605597" class="header-phone">+7 701 760 5597</a>
     </div>
   </header>
 
